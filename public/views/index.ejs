@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <meta charset="UTF-8">
+		<link href="assets/style.css" type="text/css" rel="stylesheet" />
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js" ></script>
+		<title>Test</title>
+	</head>
+	<body>
+    <nav></nav>
+  		<form method="POST" action="/person">
+        <h5>´・ω・`</h5>
+  			<input type="text" id="firstname" name="firstname" placeholder ="標題。" /><br />
+  			<input type="text" id="lastname" name="lastname" placeholder ="。......。"/><br />
+  		<!--	<input type="Submit" value="Send" /> -->
+  		<input type="submit" value="∞"  />
+  		</form>
+
+			<div id="con">
+	      <h3>回應</h3>
+	  		<% if (userinfos.length) { %>
+	  		  <div id="ul">
+	    		  <% userinfos.forEach(function(userinfo){ %>
+	  		      <div id="t1"><h4><%= userinfo['name'] %></h4></div>
+	            <div id="t2"><%= userinfo['words'] %></div>
+							<div id="space"></div>
+	  		    <% }) %>
+	  	  	</div>
+	  		<% } %>
+	    </div>
+
+	</body>
+</html>
